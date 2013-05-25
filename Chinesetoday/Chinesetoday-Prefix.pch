@@ -1,0 +1,21 @@
+//
+// Prefix header for all source files of the 'Chinesetoday' target in the 'Chinesetoday' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define Data_URL @"http://blog.sina.com.cn/rss/2074077421.xml"
+//#define Data_URL @"feed://sermons2.redeemer.com/sites/sermons2.redeemer.com/files/RSS_Feeds/Timothy_Keller_Podcasts.xml"
+
+#define UMENG_APPKEY @"5136b37e527015534700005b"
+
+#define FONT_NAME @"Helvetica"
