@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "MobClick.h"
+#import "LeftViewController.h"
+#import "JASidePanelController.h"
 
 @implementation AppDelegate
 
@@ -46,14 +48,27 @@
     
     [self umengTrack];
     
+    self.viewController = [[JASidePanelController alloc] init];
+    self.viewController.shouldDelegateAutorotateToVisiblePanel = NO;
+    
+    LeftViewController *leftviewcontroller = [[LeftViewController alloc] init];
+    
+    self.viewController.leftPanel = leftviewcontroller;
+    
+    [leftviewcontroller release];
+    
+    
     HomeViewController *homevc = [[HomeViewController alloc] init];
     UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:homevc];
     [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"banner.png"] forBarMetrics:UIBarMetricsDefault];
-    [self.window setRootViewController:nav];
+    
+    self.viewController.centerPanel = nav;
+    
+    [self.window setRootViewController:self.viewController];
+    
     [nav release];
     [homevc release];
-    
-    self.window.backgroundColor = [UIColor whiteColor];
+//    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

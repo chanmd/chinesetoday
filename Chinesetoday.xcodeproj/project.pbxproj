@@ -52,6 +52,13 @@
 		6B95580B16F9BC0A00AF6D66 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B95580916F9BC0A00AF6D66 /* refresh.png */; };
 		6B95580C16F9BC0A00AF6D66 /* refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B95580A16F9BC0A00AF6D66 /* refresh@2x.png */; };
 		6BB0633016F1AA9C00A7134E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0632F16F1AA9C00A7134E /* DetailViewController.m */; };
+		8F12D7AD175C3F7700468FD6 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F12D7AA175C3F7700468FD6 /* JASidePanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		8F12D7AE175C3F7700468FD6 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F12D7AC175C3F7700468FD6 /* UIViewController+JASidePanel.m */; };
+		8F12D7B5175C40CB00468FD6 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F12D7B4175C40CB00468FD6 /* LeftViewController.m */; };
+		8F12D7BA175C49FA00468FD6 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F12D7B6175C49FA00468FD6 /* arrow.png */; };
+		8F12D7BB175C49FA00468FD6 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F12D7B7175C49FA00468FD6 /* arrow@2x.png */; };
+		8F12D7BC175C49FA00468FD6 /* btn_comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F12D7B8175C49FA00468FD6 /* btn_comment.png */; };
+		8F12D7BD175C49FA00468FD6 /* btn_comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F12D7B9175C49FA00468FD6 /* btn_comment@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +129,16 @@
 		6B95580A16F9BC0A00AF6D66 /* refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "refresh@2x.png"; path = "image/refresh@2x.png"; sourceTree = "<group>"; };
 		6BB0632E16F1AA9C00A7134E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Classes/DetailViewController.h; sourceTree = "<group>"; };
 		6BB0632F16F1AA9C00A7134E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Classes/DetailViewController.m; sourceTree = "<group>"; };
+		8F12D7A9175C3F7700468FD6 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
+		8F12D7AA175C3F7700468FD6 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
+		8F12D7AB175C3F7700468FD6 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
+		8F12D7AC175C3F7700468FD6 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
+		8F12D7B3175C40CB00468FD6 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftViewController.h; path = Classes/LeftViewController.h; sourceTree = "<group>"; };
+		8F12D7B4175C40CB00468FD6 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftViewController.m; path = Classes/LeftViewController.m; sourceTree = "<group>"; };
+		8F12D7B6175C49FA00468FD6 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = image/arrow.png; sourceTree = "<group>"; };
+		8F12D7B7175C49FA00468FD6 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow@2x.png"; path = "image/arrow@2x.png"; sourceTree = "<group>"; };
+		8F12D7B8175C49FA00468FD6 /* btn_comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_comment.png; path = image/btn_comment.png; sourceTree = "<group>"; };
+		8F12D7B9175C49FA00468FD6 /* btn_comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_comment@2x.png"; path = "image/btn_comment@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +164,10 @@
 		6B06FDF816ED73DC001DC07C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8F12D7B6175C49FA00468FD6 /* arrow.png */,
+				8F12D7B7175C49FA00468FD6 /* arrow@2x.png */,
+				8F12D7B8175C49FA00468FD6 /* btn_comment.png */,
+				8F12D7B9175C49FA00468FD6 /* btn_comment@2x.png */,
 				6B0A93E816FAA5A90010A330 /* arrow_left.png */,
 				6B0A93E916FAA5A90010A330 /* arrow_left@2x.png */,
 				6B95580916F9BC0A00AF6D66 /* refresh.png */,
@@ -171,6 +192,7 @@
 		6B45E01216E6EF4900AD9547 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8F12D7A8175C3F7700468FD6 /* JASidePanels */,
 				6B45E01916E72CB600AD9547 /* UILabel+Extensions.h */,
 				6B45E01A16E72CB600AD9547 /* UILabel+Extensions.m */,
 				6B45E01316E6EF5D00AD9547 /* msgView.h */,
@@ -242,12 +264,40 @@
 		6B6927C016E090FE003F35FD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8F12D7AF175C3FC200468FD6 /* libs */,
 				6B6927C116E0910A003F35FD /* DetailTableViewController.h */,
 				6B6927C216E0910A003F35FD /* DetailTableViewController.m */,
-				6B6927C316E0910A003F35FD /* GTMNSString+HTML.h */,
-				6B6927C416E0910A003F35FD /* GTMNSString+HTML.m */,
 				6B6927C516E0910A003F35FD /* HomeViewController.h */,
 				6B6927C616E0910A003F35FD /* HomeViewController.m */,
+				6B6927D616E0910A003F35FD /* RootViewController.h */,
+				6B6927D716E0910A003F35FD /* RootViewController.m */,
+				6B45E00216E6E35F00AD9547 /* BaseCell.h */,
+				6B45E00316E6E35F00AD9547 /* BaseCell.m */,
+				6BB0632E16F1AA9C00A7134E /* DetailViewController.h */,
+				6BB0632F16F1AA9C00A7134E /* DetailViewController.m */,
+				8F12D7B3175C40CB00468FD6 /* LeftViewController.h */,
+				8F12D7B4175C40CB00468FD6 /* LeftViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8F12D7A8175C3F7700468FD6 /* JASidePanels */ = {
+			isa = PBXGroup;
+			children = (
+				8F12D7A9175C3F7700468FD6 /* JASidePanelController.h */,
+				8F12D7AA175C3F7700468FD6 /* JASidePanelController.m */,
+				8F12D7AB175C3F7700468FD6 /* UIViewController+JASidePanel.h */,
+				8F12D7AC175C3F7700468FD6 /* UIViewController+JASidePanel.m */,
+			);
+			name = JASidePanels;
+			path = utils/JASidePanels;
+			sourceTree = "<group>";
+		};
+		8F12D7AF175C3FC200468FD6 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				6B6927C316E0910A003F35FD /* GTMNSString+HTML.h */,
+				6B6927C416E0910A003F35FD /* GTMNSString+HTML.m */,
 				6B6927C716E0910A003F35FD /* MWFeedInfo.h */,
 				6B6927C816E0910A003F35FD /* MWFeedInfo.m */,
 				6B6927C916E0910A003F35FD /* MWFeedItem.h */,
@@ -263,14 +313,8 @@
 				6B6927D316E0910A003F35FD /* NSString+HTML.m */,
 				6B6927D416E0910A003F35FD /* NSString+XMLEntities.h */,
 				6B6927D516E0910A003F35FD /* NSString+XMLEntities.m */,
-				6B6927D616E0910A003F35FD /* RootViewController.h */,
-				6B6927D716E0910A003F35FD /* RootViewController.m */,
-				6B45E00216E6E35F00AD9547 /* BaseCell.h */,
-				6B45E00316E6E35F00AD9547 /* BaseCell.m */,
-				6BB0632E16F1AA9C00A7134E /* DetailViewController.h */,
-				6BB0632F16F1AA9C00A7134E /* DetailViewController.m */,
 			);
-			name = Classes;
+			name = libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +386,10 @@
 				6B95580C16F9BC0A00AF6D66 /* refresh@2x.png in Resources */,
 				6B0A93EA16FAA5A90010A330 /* arrow_left.png in Resources */,
 				6B0A93EB16FAA5A90010A330 /* arrow_left@2x.png in Resources */,
+				8F12D7BA175C49FA00468FD6 /* arrow.png in Resources */,
+				8F12D7BB175C49FA00468FD6 /* arrow@2x.png in Resources */,
+				8F12D7BC175C49FA00468FD6 /* btn_comment.png in Resources */,
+				8F12D7BD175C49FA00468FD6 /* btn_comment@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +418,9 @@
 				6B45E01816E6EF5D00AD9547 /* MTStatusBarOverlay.m in Sources */,
 				6B45E01B16E72CB600AD9547 /* UILabel+Extensions.m in Sources */,
 				6BB0633016F1AA9C00A7134E /* DetailViewController.m in Sources */,
+				8F12D7AD175C3F7700468FD6 /* JASidePanelController.m in Sources */,
+				8F12D7AE175C3F7700468FD6 /* UIViewController+JASidePanel.m in Sources */,
+				8F12D7B5175C40CB00468FD6 /* LeftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +505,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chinesetoday/Chinesetoday-Prefix.pch";
 				INFOPLIST_FILE = "Chinesetoday/Chinesetoday-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Chinesetoday/lib\"",
@@ -480,7 +531,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chinesetoday/Chinesetoday-Prefix.pch";
 				INFOPLIST_FILE = "Chinesetoday/Chinesetoday-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Chinesetoday/lib\"",
