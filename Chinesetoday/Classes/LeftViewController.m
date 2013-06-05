@@ -44,23 +44,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    if (indexPath.row == 1) {
+        cell.textLabel.text = @"首页";
+    } else if (indexPath.row == 2) {
+        cell.textLabel.text = @"关于我们";
+    } else if (indexPath.row == 3) {
+        cell.textLabel.text = @"反馈";
+    } else if (indexPath.row == 4) {
+        cell.textLabel.text = @"设置";   
+    }
     // Configure the cell...
     
     return cell;

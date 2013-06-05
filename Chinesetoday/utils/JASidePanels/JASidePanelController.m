@@ -436,8 +436,7 @@ static char ja_kvoContext;
 //        if (!buttonController.navigationItem.leftBarButtonItem) {   
 //            buttonController.navigationItem.leftBarButtonItem = [self leftButtonForCenterPanel];
 //        }
-        
-        
+        [buttonController.navigationController.navigationBar addSubview:[self leftButtonForCenterpanel]];
         
     }
 }
@@ -935,21 +934,19 @@ static char ja_kvoContext;
 
 #pragma mark - Public Methods
 
-- (UIBarButtonItem *)leftButtonForCenterPanel {
-    return [[UIBarButtonItem alloc] initWithImage:[[self class] defaultImage] style:UIBarButtonItemStyleDone target:self action:@selector(toggleLeftPanel:)];
-}
-
-
-
-//- (UIButton *)leftButtonForCenterpanel {
-//    UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 34, 34)];
-//    [btn setBackgroundImage:[UIImage imageNamed:@"btn_comment.png"] forState:UIControlStateNormal];
-//    [btn addTarget:self action:@selector(toggleLeftPanel:) forControlEvents:UIControlEventTouchUpInside];
-//    return btn;
+//- (UIBarButtonItem *)leftButtonForCenterPanel {
+//    return [[UIBarButtonItem alloc] initWithImage:[[self class] defaultImage] style:UIBarButtonItemStyleDone target:self action:@selector(toggleLeftPanel:)];
 //}
 
+- (UIButton *)leftButtonForCenterpanel {
+    UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 7, 30, 30)];
+    [btn setBackgroundImage:[UIImage imageNamed:@"btn_comment.png"] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(toggleLeftPanel:) forControlEvents:UIControlEventTouchUpInside];
+    return btn;
+}
+
 - (void)showLeftPanel:(BOOL)animated {
-    [self showLeftPanelAnimated:animated];
+    [self showLeftPanelAnimated:animated]; 
 }
 
 - (void)showRightPanel:(BOOL)animated {
