@@ -59,6 +59,7 @@
 		8F12D7BB175C49FA00468FD6 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F12D7B7175C49FA00468FD6 /* arrow@2x.png */; };
 		8F12D7BC175C49FA00468FD6 /* btn_comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F12D7B8175C49FA00468FD6 /* btn_comment.png */; };
 		8F12D7BD175C49FA00468FD6 /* btn_comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F12D7B9175C49FA00468FD6 /* btn_comment@2x.png */; };
+		8F880A4917602CF40001A0D9 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F880A4817602CF40001A0D9 /* SettingViewController.m */; };
 		8FF72E5C175DA9FC00444B19 /* Icon_Activity.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF72E54175DA9FC00444B19 /* Icon_Activity.png */; };
 		8FF72E5D175DA9FC00444B19 /* Icon_Activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF72E55175DA9FC00444B19 /* Icon_Activity@2x.png */; };
 		8FF72E5E175DA9FC00444B19 /* Icon_Explore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF72E56175DA9FC00444B19 /* Icon_Explore.png */; };
@@ -147,6 +148,8 @@
 		8F12D7B7175C49FA00468FD6 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow@2x.png"; path = "image/arrow@2x.png"; sourceTree = "<group>"; };
 		8F12D7B8175C49FA00468FD6 /* btn_comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_comment.png; path = image/btn_comment.png; sourceTree = "<group>"; };
 		8F12D7B9175C49FA00468FD6 /* btn_comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_comment@2x.png"; path = "image/btn_comment@2x.png"; sourceTree = "<group>"; };
+		8F880A4717602CF40001A0D9 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Classes/SettingViewController.h; sourceTree = "<group>"; };
+		8F880A4817602CF40001A0D9 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Classes/SettingViewController.m; sourceTree = "<group>"; };
 		8FF72E54175DA9FC00444B19 /* Icon_Activity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_Activity.png; path = image/Icon_Activity.png; sourceTree = "<group>"; };
 		8FF72E55175DA9FC00444B19 /* Icon_Activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon_Activity@2x.png"; path = "image/Icon_Activity@2x.png"; sourceTree = "<group>"; };
 		8FF72E56175DA9FC00444B19 /* Icon_Explore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_Explore.png; path = image/Icon_Explore.png; sourceTree = "<group>"; };
@@ -301,6 +304,8 @@
 				6BB0632F16F1AA9C00A7134E /* DetailViewController.m */,
 				8F12D7B3175C40CB00468FD6 /* LeftViewController.h */,
 				8F12D7B4175C40CB00468FD6 /* LeftViewController.m */,
+				8F880A4717602CF40001A0D9 /* SettingViewController.h */,
+				8F880A4817602CF40001A0D9 /* SettingViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				8F12D7AD175C3F7700468FD6 /* JASidePanelController.m in Sources */,
 				8F12D7AE175C3F7700468FD6 /* UIViewController+JASidePanel.m in Sources */,
 				8F12D7B5175C40CB00468FD6 /* LeftViewController.m in Sources */,
+				8F880A4917602CF40001A0D9 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

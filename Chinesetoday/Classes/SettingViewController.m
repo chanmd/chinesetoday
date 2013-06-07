@@ -1,18 +1,18 @@
 //
-//  LeftViewController.m
+//  SettingViewController.m
 //  Chinesetoday
 //
-//  Created by CMD on 6/3/13.
+//  Created by CMD on 6/6/13.
 //  Copyright (c) 2013 Man Tung. All rights reserved.
 //
 
-#import "LeftViewController.h"
+#import "SettingViewController.h"
 
-@interface LeftViewController ()
+@interface SettingViewController ()
 
 @end
 
-@implementation LeftViewController
+@implementation SettingViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,31 +45,20 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 4;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"首页";
-    } else if (indexPath.row == 1) {
-        cell.textLabel.text = @"关于我们";
-    } else if (indexPath.row == 2) {
-        cell.textLabel.text = @"反馈";
-    } else if (indexPath.row == 3) {
-        cell.textLabel.text = @"设置";   
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     // Configure the cell...
     
     return cell;

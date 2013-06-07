@@ -43,6 +43,8 @@
 //	[self.view addSubview:self.myWebView];
 //    [self.myWebView loadHTMLString:[self CutAds:self.summary] baseURL:nil];
     
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
     UIScrollView *contentScroll = [[UIScrollView alloc] init];
     CGRect webFrame = [[UIScreen mainScreen] applicationFrame];
     webFrame.origin.y = 0;
