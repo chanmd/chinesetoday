@@ -94,6 +94,7 @@
 		8F12D7BC175C49FA00468FD6 /* btn_comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F12D7B8175C49FA00468FD6 /* btn_comment.png */; };
 		8F12D7BD175C49FA00468FD6 /* btn_comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F12D7B9175C49FA00468FD6 /* btn_comment@2x.png */; };
 		8F880A4917602CF40001A0D9 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F880A4817602CF40001A0D9 /* SettingViewController.m */; };
+		8FCD90671762D3AC00A8F71A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FCD90691762D3AC00A8F71A /* Localizable.strings */; };
 		8FF72E5C175DA9FC00444B19 /* Icon_Activity.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF72E54175DA9FC00444B19 /* Icon_Activity.png */; };
 		8FF72E5D175DA9FC00444B19 /* Icon_Activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF72E55175DA9FC00444B19 /* Icon_Activity@2x.png */; };
 		8FF72E5E175DA9FC00444B19 /* Icon_Explore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF72E56175DA9FC00444B19 /* Icon_Explore.png */; };
@@ -225,6 +226,9 @@
 		8F12D7B9175C49FA00468FD6 /* btn_comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_comment@2x.png"; path = "image/btn_comment@2x.png"; sourceTree = "<group>"; };
 		8F880A4717602CF40001A0D9 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Classes/SettingViewController.h; sourceTree = "<group>"; };
 		8F880A4817602CF40001A0D9 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Classes/SettingViewController.m; sourceTree = "<group>"; };
+		8FCD90641762D2D300A8F71A /* zh-Hans-CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans-CN"; path = "zh-Hans-CN.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8FCD90681762D3AC00A8F71A /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8FCD906A1762D3B100A8F71A /* zh-Hans-CN */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans-CN"; path = "zh-Hans-CN.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8FF72E54175DA9FC00444B19 /* Icon_Activity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_Activity.png; path = image/Icon_Activity.png; sourceTree = "<group>"; };
 		8FF72E55175DA9FC00444B19 /* Icon_Activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon_Activity@2x.png"; path = "image/Icon_Activity@2x.png"; sourceTree = "<group>"; };
 		8FF72E56175DA9FC00444B19 /* Icon_Explore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_Explore.png; path = image/Icon_Explore.png; sourceTree = "<group>"; };
@@ -365,6 +369,7 @@
 				6B6927A816E04AA5003F35FD /* InfoPlist.strings */,
 				6B6927AB16E04AA5003F35FD /* main.m */,
 				6B6927AD16E04AA5003F35FD /* Chinesetoday-Prefix.pch */,
+				8FCD90691762D3AC00A8F71A /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans-CN",
 			);
 			mainGroup = 6B69279316E04AA5003F35FD;
 			productRefGroup = 6B69279D16E04AA5003F35FD /* Products */;
@@ -596,6 +602,7 @@
 				6BD324FC175F4CB300DFD5DE /* umeng_logo.png in Resources */,
 				6BD324FE175F4CB300DFD5DE /* UMContactViewController.xib in Resources */,
 				6BD32502175F4CB300DFD5DE /* UMFeedbackViewController.xib in Resources */,
+				8FCD90671762D3AC00A8F71A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,8 +651,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				6B6927A916E04AA5003F35FD /* en */,
+				8FCD90641762D2D300A8F71A /* zh-Hans-CN */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8FCD90691762D3AC00A8F71A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FCD90681762D3AC00A8F71A /* en */,
+				8FCD906A1762D3B100A8F71A /* zh-Hans-CN */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -675,7 +692,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -698,7 +715,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

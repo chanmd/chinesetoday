@@ -19,3 +19,5 @@
 #define UMENG_APPKEY @"5136b37e527015534700005b"
 
 #define FONT_NAME @"Helvetica"
+
+#define AppID @"646600501"

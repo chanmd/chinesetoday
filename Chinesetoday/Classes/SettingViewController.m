@@ -7,6 +7,7 @@
 //
 
 #import "SettingViewController.h"
+#import "MobClick.h"
 
 @interface SettingViewController ()
 
@@ -26,7 +27,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    //[self.view setBackgroundColor:[UIColor whiteColor]];
+    UIView * bgview = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    bgview.backgroundColor = [UIColor whiteColor];
+    self.tableView.backgroundView = bgview;
+    [bgview release];
+    self.title = @"评分和更新";
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleBordered target:self action:@selector(goBack)];
+    UIButton * backbutton = [[UIButton alloc] initWithFrame:CGRectMake(10, 9, 27, 27)];
+    [backbutton setBackgroundImage:[UIImage imageNamed:@"btn_comment.png"] forState:UIControlStateNormal];
+    [backbutton addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationController.navigationBar addSubview:backbutton];
+    [backbutton release];
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -45,76 +60,120 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    int num = 0;
+    if (section == 0) {
+        num = 2;
+    } else if (section == 1) {
+        num = 1;
+    }
+    return num;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return @"App Store";
+    } else if (section == 1) {
+        return @"关于开发者";
+    } else {
+        return @"什么也没有";
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (!cell) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        if (indexPath.section == 0) {
+            
+            if (indexPath.row == 0) {
+                cell.textLabel.text = @"给我们评分";
+            } else if (indexPath.row == 1) {
+                cell.textLabel.text = @"检查新版本";
+            }
+            
+        } else if (indexPath.section == 1) {
+            
+            if (indexPath.row == 0) {
+                cell.textLabel.text = @"民棟";
+            } else if (indexPath.row == 1) {
+//                cell.textLabel.text = @"hello,world!";
+            }
+        } else {
+            //code here
+        }
+    }
     
     // Configure the cell...
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    if (indexPath.section == 0) {
+        
+        if (indexPath.row == 0) {
+            
+            [self goToAppStore];
+            
+        } else if (indexPath.row == 1) {
+            
+            [self checkupdate];
+            
+        }
+        
+    } else if (indexPath.section == 1) {
+        
+        if (indexPath.row == 0) {
+            
+            [self toToDeveloper];
+            
+        } else if (indexPath.row == 1) {
+            
+            NSLog(@"hello,world!");
+            
+        }
+        
+    } else {
+        //code here
+    }
+}
+
+- (void)goToAppStore
+{
+    NSString *str = [NSString stringWithFormat:
+                     @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",AppID];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+}
+
+- (void)checkupdate
+{
+    [MobClick checkUpdate];
+}
+
+- (void)toToDeveloper
+{
+    NSString *str = [NSString stringWithFormat:@"http://www.weibo.com/eclimd"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+}
+
+- (void)goBack
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

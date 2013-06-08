@@ -146,7 +146,7 @@
         NSCalendar * gregorian = gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         NSDateComponents * currentlytimeComponents = [gregorian components:NSDayCalendarUnit fromDate:currentlytime];
         if (createAtTM->tm_mday == [currentlytimeComponents day]) {
-            [dateFormatter setDateFormat:@"发布于H点"];
+            [dateFormatter setDateFormat:@"发布于今日H点"];
         } else {
             [dateFormatter setDateFormat:@"发布于M月d日"];
         }

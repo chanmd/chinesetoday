@@ -11,6 +11,7 @@
 #import "UIViewController+JASidePanel.h"
 #import "HomeViewController.h"
 #import "AboutViewController.h"
+#import "SettingViewController.h"
 #import "UMFeedbackViewController.h"
 
 @interface LeftViewController ()
@@ -66,14 +67,15 @@
     if (!cell) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (indexPath.row == 0) {
             cell.textLabel.text = @"首页";
         } else if (indexPath.row == 1) {
-            cell.textLabel.text = @"关于我们";
-        } else if (indexPath.row == 2) {
             cell.textLabel.text = @"反馈";
+        } else if (indexPath.row == 2) {
+            cell.textLabel.text = @"关于我们";
         } else if (indexPath.row == 3) {
-            cell.textLabel.text = @"设置";
+            cell.textLabel.text = @"评分和更新";
         }
     }
     return cell;
@@ -87,19 +89,12 @@
     if (indexPath.row == 0) {
         [self tapHomeView];
     } else if (indexPath.row == 1) {
-        [self tapAboutView];
-    } else if (indexPath.row == 2) {
         [self tapFeedbackView];
+    } else if (indexPath.row == 2) {
+        [self tapAboutView];
+    } else if (indexPath.row == 3) {
+        [self tapSettingView];
     }
-    
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
 }
 
 - (void)tapAboutView {
@@ -121,7 +116,12 @@
 }
 
 - (void)tapSettingView {
-    
+    SettingViewController *settingvc = [[SettingViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:settingvc];
+    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"banner.png"] forBarMetrics:UIBarMetricsDefault];
+    [self presentModalViewController:nav animated:YES];
+    [settingvc release];
+    [nav release];
 }
 
 - (void)tapFeedbackView {

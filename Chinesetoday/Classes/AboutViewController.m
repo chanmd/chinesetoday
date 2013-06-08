@@ -26,6 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = @"关于我们";
+    
     UIScrollView * scrollview = [[UIScrollView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     UIImageView * imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AboutChineseToday.jpg"]];
@@ -36,7 +39,8 @@
     [self.view addSubview:scrollview];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
-    
+    [imageview release];
+    [scrollview release];
 }
 
 - (void)didReceiveMemoryWarning
