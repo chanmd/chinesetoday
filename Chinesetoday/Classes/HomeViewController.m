@@ -41,13 +41,8 @@
 	parsedItems = [[NSMutableArray alloc] init];
 	self.itemsToDisplay = [NSArray array];
     
-    UIButton * refreshbtn = [[UIButton alloc] init];
-    [refreshbtn setFrame:CGRectMake(286, 11, 22, 22)];
-    [refreshbtn addTarget:self action:@selector(refresh) forControlEvents:UIControlEventTouchUpInside];
-    [refreshbtn setBackgroundImage:[UIImage imageNamed:@"refresh.png"] forState:UIControlStateNormal];
-    [refreshbtn setBackgroundColor:[UIColor clearColor]];
+    self.navigationItem.rightBarButtonItem = [self rightButtonGen];
     
-    [self.navigationController.navigationBar addSubview:refreshbtn];
     
 	// Parse
 	NSURL *feedURL = [NSURL URLWithString:Data_URL];
@@ -60,6 +55,17 @@
 
 #pragma mark -
 #pragma mark Parsing
+
+- (UIBarButtonItem *)rightButtonGen {
+    UIImage *faceImage = [UIImage imageNamed:@"refresh.png"];
+    UIButton *face = [UIButton buttonWithType:UIButtonTypeCustom];
+    face.bounds = CGRectMake( 0, 0, 22, 22 );
+//    face.bounds = CGRectMake( 0, 0, faceImage.size.width, faceImage.size.height );
+    [face setImage:faceImage forState:UIControlStateNormal];
+    [face addTarget:self action:@selector(refresh) forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:face];
+}
+
 
 // Reset and reparse
 - (void)refresh {
